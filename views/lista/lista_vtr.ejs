@@ -1,0 +1,59 @@
+<%- include ../parts/head.ejs %>
+				<!-- Formulário de dacastro -->
+				<div class="py-5 text-center">
+	        <h2><%= title %></h2>
+	      </div>
+
+				<div class="row row_padding">
+					<div class="col-md-12">
+						<input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Procure por um nome..." title="Entre com um nome" style="background-image: url('images/searchicon.png'); background-position: 10px 10px; background-repeat: no-repeat; padding: 8px 20px 8px 40px;" >
+					</div>
+				</div>
+
+	      <div class="row row_padding">
+	        <div class="col-md-12">
+						<div class="mb-3">
+							<table class="table table-sm" id="myTable">
+							  <thead>
+							    <tr>
+							      <th>Prefixo</th>
+							      <th>Componente</th>
+							      <th>Equipamento</th>
+										<th>Contato</th>
+										<th>Radio</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+									<%docs.forEach(function(vtr){%>
+								    <tr>
+								      <td><%= vtr.prefixo %></td>
+								      <td><%= vtr.componente %></td>
+								      <td><%= vtr.equip %></td>
+											<td><%= vtr.contato %></td>
+								      <td><%= vtr.radio %></td>
+											<td>
+												<button type="button" class="btn btn-outline-light">
+													<a href="/edit_vtr/<%=vtr._id %>"> <img src="images/png/pencil-2x.png"> </a>
+												</button>
+												<button type="button" class="btn btn-outline-light">
+													<a href="/del_vtr/<%=vtr._id %>"
+														onclick="return confirm('Tem certeza que deseja excluir?');"> <img src="images/png/trash-2x.png"> </a>
+												</button>
+											</td>
+								    </tr>
+									<% }) %>
+							  </tbody>
+							</table>
+	          </div>
+	        </div>
+	      </div>
+
+		  <footer class="footer_fixed">
+					<div class="row">
+					  <div class="col-12 col-md">
+							<small class="">© 2017-2018</small>
+					  </div>
+					</div>
+		  </footer>
+
+<%- include ../parts/footer_lista.ejs %>

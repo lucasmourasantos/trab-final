@@ -1,0 +1,88 @@
+<%- include parts/head.ejs %>
+				<!-- Formulário de dacastro -->
+				<div class="py-5 text-center">
+	        <h2>Cadastro de Ocorrências</h2>
+	      </div>
+
+	      <div class="row row_padding">
+	        <div class="col-md-10">
+
+	          <form action="/cad_ocorr" method="POST" class="needs-validation" novalidate>
+
+	              <div class="mb-3">
+	                <label for="tipo">Tipo</label>
+	                <input type="text" class="form-control" id="tipo" name="tipo" placeholder="" value="" required>
+	                <div class="invalid-feedback">
+	                  Entrar com um tipo de ocorrência.
+	                </div>
+	              </div>
+
+	              <div class="mb-3">
+									<label for="subtipo">Subtipo</label>
+	                <input type="text" class="form-control" id="subtipo" name="subtipo" placeholder="" value="" required>
+	                <div class="invalid-feedback">
+	                  Entrar com um subtipo de ocorrência.
+	                </div>
+	              </div>
+
+								<div class="mb-3">
+	                <label for="bairro">Bairro</label>
+	                <input type="text" class="form-control" id="bairro" name="ende" placeholder="" value="" required>
+	                <div class="invalid-feedback">
+	                  Entre com um bairro.
+	                </div>
+	              </div>
+
+								<div class="mb-3">
+	                <label for="endereco">Endereço</label>
+	                <input type="text" class="form-control" id="endereco" name="bairro" placeholder="" value="" required>
+	                <div class="invalid-feedback">
+	                  Entre com um endereço.
+	                </div>
+	              </div>
+
+								<div class="mb-3">
+	                <label for="referencia">Ponto de referência</label>
+	                <input type="text" class="form-control" id="referencia" name="ptref" placeholder="" value="" required>
+	                <div class="invalid-feedback">
+	                  Entre com um ponto de referência.
+	                </div>
+	              </div>
+
+								<div class="mb-3">
+	                <label for="solicitante">Solicitante</label>
+	                <input type="text" class="form-control" id="solicitante" name="solicitante" placeholder="" value="" required>
+	                <div class="invalid-feedback">
+	                  Entrar com um solicitante.
+	                </div>
+	              </div>
+
+	            <div class="mb-3">
+	              <label for="solicitante">Contato do solicitante</label>
+	              <div class="input-group">
+	                <div class="input-group-prepend">
+	                  <span class="input-group-text">(89)</span>
+	                </div>
+	                <input type="text" class="form-control" id="solicitante" name="solic_contato" placeholder="0 0000-0000" required>
+	                <div class="invalid-feedback" style="width: 100%;">
+	                  Entre com um contato válido.
+	                </div>
+	              </div>
+	            </div>
+
+	            <hr class="mb-4">
+
+	            <button class="btn btn-primary btn-lg btn-block" type="submit">Efetuar cadastro</button>
+	          </form>
+	        </div>
+	      </div>
+
+		  <footer class="footer_fixed">
+					<div class="row">
+					  <div class="col-12 col-md">
+							<small class="">© 2017-2018</small>
+					  </div>
+					</div>
+		  </footer>
+
+<%- include parts/footer.ejs %>

@@ -1,0 +1,90 @@
+<%- include parts/head.ejs %>
+
+				<!-- Formulário de dacastro -->
+				<div class="py-5 text-center">
+	        <h2><%= title %></h2>
+	      </div>
+
+	      <div class="row row_padding">
+	        <div class="col-md-12">
+
+	          <form action="<%= action %>" method="POST" class="needs-validation" novalidate>
+
+	              <div class="mb-3">
+	                <label for="nome">Nome</label>
+	                <input type="text" class="form-control" id="nome" name="nome" placeholder="" value="<%= doc.nome %>" required>
+	                <div class="invalid-feedback">
+	                  Entrar com um nome válido.
+	                </div>
+	              </div>
+
+	              <div class="mb-3">
+	                <label for="matricula">Matrícula</label>
+	                <input type="text" class="form-control" id="matricula" name="matricula" placeholder="" value="<%= doc.matricula %>" required>
+	                <div class="invalid-feedback">
+	                  Entre com uma matricula.
+	                </div>
+	              </div>
+
+							<div class="row">
+	              <div class="col-md-4 mb-3">
+	                <label for="posto">Posto/Graduação</label>
+	                <select class="custom-select d-block w-100" id="posto" name="posto_grad" required>
+	                  <option value="<%= doc.posto_grad %>">Escolha...</option>
+	                  <option>Coronel</option>
+										<option>Major</option>
+										<option>Capitão</option>
+										<option>Primeiro Tenente</option>
+										<option>Segundo Tenente</option>
+										<option>Cabo</option>
+										<option>Soldado 1ª Classe</option>
+										<option>Soldado 2ª Classe</option>
+	                </select>
+	                <div class="invalid-feedback">
+	                  Escolha uma categoria.
+	                </div>
+	              </div>
+
+	              <div class="col-md-4 mb-3">
+	                <label for="contato">Fone (fixo)</label>
+									<div class="input-group">
+		                <div class="input-group-prepend">
+		                  <span class="input-group-text">(89)</span>
+		                </div>
+		                <input type="text" class="form-control" id="contato" name="fone_fixo" value="<%= doc.fone_fixo %>" placeholder="0000-0000" required>
+		                <div class="invalid-feedback" style="width: 100%;">
+		                  Entre com um contato válido.
+		                </div>
+		              </div>
+	              </div>
+
+								<div class="col-md-4 mb-3">
+	                <label for="contato2">Fone (Celular)</label>
+									<div class="input-group">
+		                <div class="input-group-prepend">
+		                  <span class="input-group-text">(89)</span>
+		                </div>
+		                <input type="text" class="form-control" id="contato2" name="celular" value="<%= doc.celular %>" placeholder="0 0000-0000" required>
+		                <div class="invalid-feedback" style="width: 100%;">
+		                  Entre com um contato válido.
+		                </div>
+		              </div>
+	              </div>
+	            </div>
+
+	            <hr class="mb-4">
+
+	            <button class="btn btn-primary btn-lg btn-block" type="submit">Efetuar cadastro</button>
+	          </form>
+	        </div>
+	      </div>
+
+		  <footer class="footer_fixed">
+					<div class="row">
+					  <div class="col-12 col-md">
+							<small class="">© 2017-2018</small>
+					  </div>
+					</div>
+		  </footer>
+
+<%- include parts/footer.ejs %>

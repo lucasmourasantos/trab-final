@@ -1,0 +1,63 @@
+<%- include ../parts/head.ejs %>
+				<!-- Formulário de dacastro -->
+				<div class="py-5 text-center">
+	        <h2><%= title %></h2>
+	      </div>
+
+				<div class="row row_padding">
+					<div class="col-md-12">
+						<input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Procure por um nome..." title="Entre com um nome" style="background-image: url('images/searchicon.png'); background-position: 10px 10px; background-repeat: no-repeat; padding: 8px 20px 8px 40px;" >
+					</div>
+				</div>
+
+	      <div class="row row_padding">
+	        <div class="col-md-12">
+						<div class="mb-3">
+							<table class="table table-sm" id="myTable">
+							  <thead>
+							    <tr>
+							      <th>Tipo</th>
+							      <th>Subtipo</th>
+							      <th>Endereco</th>
+										<th>Bairro</th>
+										<th>Ponto de Ref.</th>
+										<th>Solicitante</th>
+										<th>Fone Solic.</th>
+										<th></th>
+							    </tr>
+							  </thead>
+							  <tbody>
+									<%docs.forEach(function(ocorr){%>
+								    <tr>
+								      <td><%= ocorr.tipo %></td>
+								      <td><%= ocorr.subtipo %></td>
+								      <td><%= ocorr.ende %></td>
+											<td><%= ocorr.bairro %></td>
+								      <td><%= ocorr.ptref %></td>
+											<td><%= ocorr.solicitante %></td>
+								      <td><%= ocorr.solic_contato %></td>
+											<td>
+												<button type="button" class="btn btn-outline-light">
+													<a href="#"> <img src="images/png/pencil-2x.png"> </a>
+												</button>
+												<button type="button" class="btn btn-outline-light">
+													<a href="#"> <img src="images/png/trash-2x.png"> </a>
+												</button>
+											</td>
+								    </tr>
+									<% }) %>
+							  </tbody>
+							</table>
+	          </div>
+	        </div>
+	      </div>
+
+		  <footer class="footer_fixed">
+					<div class="row">
+					  <div class="col-12 col-md">
+							<small class="">© 2017-2018</small>
+					  </div>
+					</div>
+		  </footer>
+
+<%- include ../parts/footer_lista.ejs %>
