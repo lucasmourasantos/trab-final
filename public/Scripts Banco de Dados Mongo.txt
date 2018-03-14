@@ -1,0 +1,34 @@
+Scripts Banco de Dados Mongo
+
+> use trab_final
+
+> db.vtr.insert({ 
+"prefixo" : "", 
+"compo" : "",
+"equip" : "",
+"contato" : "",
+"radio" : ""
+})
+
+
+
+> db.ocorr.insert({ 
+"tipo":"",
+"subtipo":"",
+"ende":"",
+"bairro":"",
+"ptref":"",
+"solicitante":"",
+"solic_contato":""
+})
+
+
+
+
+> db.usuario.insert({ 
+"nome":"",
+"matricula":"",
+"posto_grad":"",
+"fone_fixo":"",
+"celular":""
+})
